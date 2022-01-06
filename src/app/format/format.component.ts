@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-format',
-  templateUrl: './format.component.html'
+  templateUrl: './format.component.html',
 })
 export class FormatComponent implements OnInit {
   data: Observable<any>;
@@ -23,9 +23,9 @@ export class FormatComponent implements OnInit {
       }
     }
   }
-  `
+  `;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {
     this.data = this.httpClient.get('/assets/format.json');
